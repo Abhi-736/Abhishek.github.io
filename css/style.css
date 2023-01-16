@@ -45,7 +45,7 @@ body {
 }
 
 i {
-    color: var(--blue)
+    color:var(--color-body);
 }
 
 ;
@@ -62,21 +62,35 @@ h6 {
 
 a {
     text-decoration: none;
-    color: var(--color-body);
+    color: var(--color-body) ;
     transition: all 0.4s ease;
 }
 
-/* a:hover {color:var(--color-brand);} */
+a:hover {color:var(--color-brand) !important;}
 .navbar img {
     width: 100%
 }
+#Home .work:hover{
+color:var(--dark) !important;
+}
 
-#topbar {
+#topbar {position:sticky;
+    top:0;
+    margin-left:240px;
     background: #1c7a30;
     height: 40px;
     font-size: 14px;
     transition: all 0.5s;
     color: #fff;
+}
+.topp{height:70px}
+#topbar .blue {
+    color:white !important;
+    transition:all 0.5s;
+    text-decoration: none;
+}
+#topbar .blue:hover {color:var(--color-brand) !important
+
 }
 
 .fixed-top {
@@ -221,7 +235,7 @@ li.nav-item:hover::after {
     transition: all 0.4s;
 }
 
-a.link-custom {
+a.link-customm, a.link-custom {
     font-weight: 500;
     position: relative;
     text-decoration: none;
@@ -229,12 +243,12 @@ a.link-custom {
     transition: all 0.4s;
 }
 
-a.link-custom:hover {
+a.link-customm,a.link-custom:hover {
     color: var(--color-brand);
 
 }
 
-a.link-custom::after {
+a.link-customm::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -245,7 +259,7 @@ a.link-custom::after {
     transition: all 0.4s;
 }
 
-a.link-custom:hover::after {
+a.link-customm:hover::after {
     width: 100%;
 
 }
@@ -282,24 +296,60 @@ a.link-custom:hover::after {
     border-color: var(--color-base);
     color: var(--color-body);
 }
-#contact .form-control:focus{
-border-color:var(--color-base);
+
+#contact .form-control:focus {
+    border-color: var(--color-base);
 }
-#contact .form-control::placeholder{
+
+#contact .form-control::placeholder {
     color: var(--color-body);
 }
+
+/*Work*/
+#Work .container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Card*/
+.card-custom .card-custom-image {
+    overflow: hidden;
+    min-width: 100%;
+}
+/* .card-custom .link-custom .rounded-4 {
+    background-image: cover;
+    background-size: auto;
+}
+ */
+.card-custom .card-custom-image img {
+    background-image:cover;
+    min-width: 100%;
+    max-height: 300px;
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+
+/*Work*/
 /*Social Icons*/
-.social-icons i{
+.social-icons i {
     width: 40px;
     height: 40px;
-    color: var(--green) ;
+    color: var(--green);
     display: inline-flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     background-color: var(--color-base);
 
 }
-.social-icons i:hover{
-    color:#208e37 !important;
+
+.social-icons i:hover {
+    color: #208e37 !important;
 }
-.social-icons a{text-decoration:none;}
+
+.social-icons a {
+    text-decoration: none;
+}
